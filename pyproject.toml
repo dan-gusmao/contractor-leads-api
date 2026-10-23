@@ -1,0 +1,26 @@
+[project]
+name = "contractor-leads-api"
+version = "0.1.0"
+description = "Contractor Leads API: a construction-project marketplace where contractors use credits to unlock customer leads."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "dan-gusmao" }]
+requires-python = ">=3.12"
+dependencies = [
+    "email-validator==2.3.0",
+    "fastapi==0.162.0",
+    "python-multipart==0.0.32",
+    "sqlalchemy==2.1.6",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2==2.16.0",
+    "pytest==9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
